@@ -1,0 +1,47 @@
+.image {
+    height: 300px;
+}
+
+body {
+    background-image: url(https://as1.ftcdn.net/jpg/02/29/32/12/500_F_229321273_73vYFV8g841iEbq7pGE1VY8aikmWfgLd.jpg);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navContent {
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 100px;
+}
+
+li {
+    margin-left: 25px;
+    margin-right: 5px
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px;
+    background-color: white;
+}
+
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}

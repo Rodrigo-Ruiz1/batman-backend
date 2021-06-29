@@ -1,0 +1,6 @@
+<h1>${title}</h1>
+<ul>
+    ${data.map(media =>
+        `<li><a href="./${media.slug}">${media.media_name}</a></li>`
+    ).join('')}
+</ul>
