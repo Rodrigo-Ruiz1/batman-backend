@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <div class="navContent">
         <nav class="nav">
             <ul id="navList">
                 <li><a href="/">Home</a></li>
-                <li><a href="/users/signup">Sign up</a></li>
-                <li><a href="/users/login">Login</a></li>
+                ${!!is_logged_in ? 
+                    `<li><a href='/users/logout'>Logout</a>`
+                    :
+                    `
+                    <li><a href="/users/signup">Sign up</a></li>
+                    <li><a href="/users/login">Login</a></li>
+                    `
+                }
             </ul>
         </nav>
     </div>
