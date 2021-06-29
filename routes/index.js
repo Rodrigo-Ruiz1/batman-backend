@@ -13,7 +13,8 @@ router.get('/:slug?', async (req, res) => {
             locals: {
                 title: 'Batfacts',
                 media: theMedia,
-                review: theReview
+                review: theReview,
+                is_logged_in: req.session.is_logged_in
             },
             partials: {
                 body: 'partials/reviews'
@@ -23,10 +24,12 @@ router.get('/:slug?', async (req, res) => {
     } else {
         const mediaData = await BatmanModel.getAllMedia();
         // console.log("TOPICS ARE: ", topicData)
+        console.log('REQUEST SESSION: ', req.session);
         res.render('template', {
             locals: {
                 title: 'Movies and Films starring Batman',
                 data: mediaData,
+                is_logged_in: req.session.is_logged_in
             },
             partials: {
                 body: 'partials/home'
